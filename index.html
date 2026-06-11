@@ -4,84 +4,102 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./img/my-icon.png" type="image/x-icon">
-  <title>Portfólio - Carlos Jr</title>
+  <title>Portfólio — Carlos B.</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
 
-<nav class="navbar">
-  <div class="container">
-    <div class="menu-toggle">
-      <input type="checkbox" id="toggle">
-      <label for="toggle" class="toggle-btn">&#9776;</label>
+  <nav class="navbar">
+    <div class="container">
+      <a class="nav-brand" href="#">CB<span class="brand-dot">.</span></a>
+      <ul class="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a onclick="redirecionarprojeto()" href="#">Projetos</a></li>
+        <li><a onclick="redirecionarcertificados()" href="#">Certificados</a></li>
+      </ul>
     </div>
-    <ul class="menu">
-      <li><a href="#inicio">Início</a></li>
-      <li><a onclick="redirecionarprojeto()" href="#projetos">Projetos</a></li>
-      <li><a  onclick="redirecionarcertificados()" href="#certificados">Certificados</a></li>
-    </ul>
-  </div>
-</nav>
+  </nav>
 
-<div class="image-container">
-  <img src="./img/analitycs.gif" alt="Descrição da imagem">
-  <div class="typing-effect">
-    <p>Seja bem-vindo ao meu portfólio</p>
-  </div>
-</div>
-<div class="social-icons">
-  <a href="https://github.com/Carlosjr97" target="_blank"><img src="./img/github.png" alt="GitHub Icon" class="icon"></a>
-  <a href="https://www.linkedin.com/in/carlos-junior97/" target="_blank"><img src="./img/linkedin.png" alt="LinkedIn Icon" class="icon"></a>
-</div>
-</a>
-<br>
-<br>
-<br>
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <div class="hero-tag">&lt;engenheiro_de_software /&gt;</div>
+      <h1 class="hero-name">Carlos <span class="name-accent">B.</span></h1>
+      <p class="hero-bio">
+        Minha trajetória na tecnologia começou pela paixão por computadores, hardware e redes, o que me levou a atuar por quatro anos como Técnico em Telecomunicações. Em busca de novos desafios, iniciei a graduação em Ciência da Computação com foco em dados e desenvolvimento de software.
 
-<!-- Lista horizontal das imagens -->
-<h2>Techs</h2>
-<br>
-<ul class="responsive-list">
-  <li><img src="./img/SQL.png" alt="SQL Logo"></li>
-  <li><img src="./img/python.png" alt="Python Logo"></li>
-  <li><img src="./img/excel.png" alt="Excel Logo"></li>
-  <li><img src="./img/powerbi.avif" alt="powerbi"></li>
-</ul>
-<ul class="responsive-list2">
-  <li><img src="./img/flocos-de-neve.png" alt="snowflake"></li>
-  <li><img src="./img/postgre.png" alt="postgre"></li>
-  <li><img src="./img/AWS-Logo-halfwhite.png" alt="aws"></li>
-  <li><img src="./img/airflow.png" alt="airflow"></li>
-</ul>
-  <ul class="responsive-list3">
-  <li><img src="./img/dbt-logo-500AB0BAA7-seeklogo.com.png" alt="dbt"></li>
-  </ul>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-  
+Em 2024, ingressei no iFood, atuando inicialmente na gestão de pagamentos de fornecedores e, posteriormente, como Analista de Sistemas, realizando diagnóstico de problemas, melhorias de processos e desenvolvimento de soluções para plataformas internas.
+
+Essa transição da infraestrutura para o desenvolvimento me permitiu construir uma visão ampla da tecnologia, combinando conhecimento técnico, entendimento de processos e foco na resolução de problemas. Hoje, sigo aprofundando minhas habilidades em engenharia de software e desenvolvimento de soluções que gerem impacto real para negócios e usuários.
+
+      </p>
+      <div class="hero-links">
+        <a href="./img/cv2026.docx" download class="hero-btn hero-btn--primary">
+          <img src="./img/resume.png" alt="CV"> Currículo
+        </a>
+        <a href="https://github.com/Carlosjr97" target="_blank" class="hero-btn">
+          <img src="./img/github.png" alt="GitHub"> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/carlos-junior97/" target="_blank" class="hero-btn">
+          <img src="./img/linkedin.png" alt="LinkedIn"> LinkedIn
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="visual-frame">
+        <img src="./img/200w.gif" alt="Analytics">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="techs">
+    <h2>Stack</h2>
+    <div class="tech-grid">
+      <div class="tech-item"><img src="./img/react.png" alt="React"><span>React</span></div>
+      <div class="tech-item"><img src="./img/python.png" alt="Python"><span>Python</span></div>
+      <div class="tech-item"><img src="./img/postgre.png" alt="PostgreSQL"><span>PostgreSQL</span></div>
+      <div class="tech-item"><img src="./img/AWS-Logo-halfwhite.png" alt="AWS"><span>AWS</span></div>
+      <div class="tech-item"><img src="./img/java1.png" alt="Java"><span>Java</span></div>
+      <div class="tech-item"><img src="./img/angular.png" alt="Angular"><span>Angular</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="ai-tools">
+    <h2>AI Tools</h2>
+    <div class="ai-grid">
+      <div class="ai-card">
+        <div class="ai-card-inner">
+          <img src="./img/claudepng.png" alt="Claude Code">
+          <div class="ai-card-info">
+            <span>Assistente de código</span>
+          </div>
+        </div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-card-inner">
+          <img src="./img/opencode-text.png" alt="OpenCode">
+          <div class="ai-card-info">
+            <span>Subagentes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>
-<div class="contact-me">
-  <p>Para entrar em contato, envie um e-mail para:</p>
-  <a href="mailto:cbarbosa1009@gmail.com">cbarbosa1009@gmail.com</a>
-</div>
-    </footer>
+    <div class="contact-me">
+      <p>Entre em contato</p>
+      <a href="mailto:cbarbosa1009@gmail.com">cbarbosa1009@gmail.com</a>
+    </div>
+  </footer>
 
-<script>
-  function redirecionarcertificados() {
-          window.location.href = "c&c.html"
-}
-
-function redirecionarprojeto() {
-          window.location.href = "projetos.html"
-}
-</script>
+  <script>
+    function redirecionarcertificados() { window.location.href = "c&c.html"; }
+    function redirecionarprojeto()      { window.location.href = "projetos.html"; }
+  </script>
 
 </body>
 </html>

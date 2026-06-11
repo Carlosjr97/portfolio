@@ -4,67 +4,141 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./img/my-icon.png" type="image/x-icon">
-  <title>Portfólio - Carlos Jr</title>
-  <link rel="stylesheet" href="projetos.css">
+  <title>Projetos — Carlos B.</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="container">
-    <div class="menu-toggle">
-      <input type="checkbox" id="toggle">
-      <label for="toggle" class="toggle-btn">&#9776;</label>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <nav class="navbar">
+    <div class="container">
+      <a class="nav-brand" href="index.html">CB<span class="brand-dot">.</span></a>
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="c&c.html">Certificados</a></li>
+      </ul>
     </div>
-    <ul class="menu">
-      <li><a onclick="redirecionarinicio()" href="#inicio">Início</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a onclick="redirecionarcertificados()" href="#certificados">Certificados</a></li>
-    </ul>
-  </div>
-</nav>
+  </nav>
 
+  <section class="section section--wide" id="projetos">
+    <h2>Projetos</h2>
 
-<br>
-<br>
+    <!-- Na Régua -->
+    <div class="project-featured">
+      <div class="project-featured-visual">
+        <div class="visual-frame">
+          <img src="./img/naregua.png" alt="Na Régua">
+        </div>
+      </div>
 
-<div class="grid-container">
-    <div class="grid-item">
-      <img src="./img/bitcoin.jpeg" alt="Projeto 1">
-      <a href="https://colab.research.google.com/drive/16Q1GAE6mB8j560h0N4XLDyppKox4h0aA?usp=drive_link" target="_blank" class="overlay">
-        <span class="text">Acessar Projeto</span>
-      </a>
+      <div class="project-featured-content">
+        <div class="project-tag">&lt;saas /&gt;</div>
+        <h3 class="project-title">Na Régua</h3>
+
+        <p class="project-desc">Na Régua nasceu de um sonho simples e honesto: o de empreender.
+
+Este é o meu primeiro SaaS — um projeto construído linha por linha com a crença de que tecnologia pode transformar a vida de pequenos empreendedores. A ideia surgiu da vontade de criar algo real, algo que resolva um problema verdadeiro e gere valor para quem trabalha duro todos os dias.
+
+Na Régua é uma plataforma de gestão para profissionais autônomos e pequenos negócios — com controle de agendamentos, serviços e financeiro em um só lugar. Cada funcionalidade entregue é uma vitória. Cada bug resolvido é uma lição. Esse é só o começo.</p>
+
+        <div class="project-stack">
+          <div class="stack-group">
+            <span class="stack-label">Frontend</span>
+            <div class="stack-chips">
+              <span class="stack-chip">TypeScript</span>
+              <span class="stack-chip">Next.js 15</span>
+              <span class="stack-chip">React 19</span>
+              <span class="stack-chip">Tailwind CSS v4</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <span class="stack-label">Backend</span>
+            <div class="stack-chips">
+              <span class="stack-chip">Supabase</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <span class="stack-label">Libs</span>
+            <div class="stack-chips">
+              <span class="stack-chip">date-fns</span>
+              <span class="stack-chip">Moment.js</span>
+              <span class="stack-chip">react-big-calendar</span>
+              <span class="stack-chip">Lucide React</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://www.naregua.dev.br/" target="_blank" class="hero-btn hero-btn--primary">
+          Acessar Projeto
+        </a>
+      </div>
     </div>
-    <div class="grid-item">
-      <img src="./img/ifood-entregado.jpg" alt="Projeto 2">
-      <a href="https://colab.research.google.com/drive/1jlw_f51ULno-8cuDjVuhh1g-L1fgSyV9" target="_blank" class="overlay">
-        <span class="text">Acessar Projeto</span>
-      </a>
-    </div>
-    <div class="grid-item">
-      <img src="./img/desc.jpg" alt="Projeto 3">
-      <a href="https://colab.research.google.com/drive/1cYmlnsT9d_pn4oPaGNAs7XxuOF6DQuO-?usp=drive_link" target="_blank" class="overlay">
-        <span class="text">Acessar Projeto</span>
-      </a>
-    </div>
-    <div class="grid-item">
-      <img src="./img/banner-seguranca-publica.png" alt="Projeto 4">
-      <a href="https://colab.research.google.com/drive/1lLWSGhN737JYXfMMmJ0hw4yvZibpsuY4?usp=sharing" target="_blank" class="overlay">
-        <span class="text">Acessar Projeto</span>
-      </a>
-    </div>
-  </div>
 
+    <hr class="projects-divider">
 
+    <!-- Lotofácil -->
+    <div class="project-featured project-featured--reverse">
+      <div class="project-featured-visual">
+        <div class="visual-frame">
+          <img src="./img/lotofacil.jpg" alt="Lotofácil Analyzer">
+        </div>
+      </div>
 
-  <script>
-    function redirecionarcertificados() {
-            window.location.href = "c&c.html"
-  }
-  
-  function redirecionarinicio() {
-            window.location.href = "index.html"
-  }
-  </script>
+      <div class="project-featured-content">
+        <div class="project-tag">&lt;fullstack /&gt;</div>
+        <h3 class="project-title">Lotofácil Analyzer</h3>
+
+        <p class="project-desc">⚠ Sabia que a probabilidade de acertar os 15 números da Lotofácil é de 1 em 3.268.760? Apesar de parecer enorme, ela é uma das loterias com maior chance de premiação do Brasil — e ainda paga prêmio para acertos menores! Aqui você sorteia suas combinações na hora, sem precisar esperar ninguém.</p>
+
+        <div class="project-stack">
+          <div class="stack-group">
+            <span class="stack-label">Backend</span>
+            <div class="stack-chips">
+              <span class="stack-chip">Java 17</span>
+              <span class="stack-chip">Spring Boot 3.5</span>
+              <span class="stack-chip">Maven</span>
+              <span class="stack-chip">Docker</span>
+              <span class="stack-chip">Render</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <span class="stack-label">Frontend</span>
+            <div class="stack-chips">
+              <span class="stack-chip">Angular 21</span>
+              <span class="stack-chip">TypeScript 5.9</span>
+              <span class="stack-chip">RxJS</span>
+              <span class="stack-chip">SCSS</span>
+              <span class="stack-chip">Vitest</span>
+              <span class="stack-chip">Prettier</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <span class="stack-label">Arquitetura</span>
+            <div class="stack-chips">
+              <span class="stack-chip">REST API</span>
+              <span class="stack-chip">SPA</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://loto-fxxcsdee5-na-regua.vercel.app/" target="_blank" class="hero-btn hero-btn--primary">
+          Acessar Projeto
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="contact-me">
+      <p>Entre em contato</p>
+      <a href="mailto:cbarbosa1009@gmail.com">cbarbosa1009@gmail.com</a>
+    </div>
+  </footer>
 
 </body>
 </html>

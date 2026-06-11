@@ -112,3 +112,61 @@ body {
 h6{
   color: #fff;
 }
+
+/* Overlay sempre visível em dispositivos touch (sem hover) */
+@media (hover: none) {
+  .overlay {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.55);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .container {
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+    order: 2;
+  }
+
+  .menu-toggle input[type="checkbox"] {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    order: 3;
+    background-color: #333;
+    padding: 10px 0;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu li {
+    display: block;
+    margin-left: 0;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+  }
+
+  .menu li:first-child {
+    border-top: none;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+}
