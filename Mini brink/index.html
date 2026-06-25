@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINI BRINK</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #add8e6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .artwork-wrapper {
+            transform-origin: center center;
+        }
+    .square{
+    margin: auto;
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#square1 {
+    width: 256px;
+    height: 500px;
+    background-color: black;
+}
+#square2 {
+    width: 80px;
+    height: 100px;
+    margin-top: 50px;
+    border-radius: 0px;
+    background-color: #90ee90;
+}
+#square3 {
+    position: absolute;
+    width: 120px;
+    height: 140px;
+    margin-top: 0px;
+    border: 1px solid white;
+}
+.circle{
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#circle1 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-top: 450px;
+    margin-right: 100px;
+    background-color: yellow;
+}
+#circle2 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-top: 70px;
+    background-color: yellow;
+}
+#circle3 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-top: -35px;
+    margin-left: 45px;
+    background-color: yellow;
+}
+#circle4 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-right: 90px;
+    background-color: yellow;
+}
+#circle5 {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-left: 290px;
+    background-color: yellow;
+}
+#circle6 {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin-top: -80px;
+    margin-right: 40px;
+    background-color: yellow;
+}
+#circle7 {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin-top: 0px;
+    margin-right: 70px;
+    background-color: yellow;
+}
+#circle8 {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin-right: 70px;
+    background-color: yellow;
+}
+#circle9 {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin-top: 0px;
+    margin-right: 70px;
+    background-color: yellow;
+}
+#circle10 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: -170px;
+    margin-left: 390px;
+    background-color: #add8e6;
+}
+#circle11 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: 0px;
+    margin-right: 513px;
+    background-color: black;
+}
+
+    </style>
+</head>
+<body>
+   <div class="container">
+     <div class="artwork-wrapper">
+     <div id="square1" class="square">
+        <div id="square2" class="square">
+            <div id="square3" class="square">
+                <div id="circle1" class="circle">
+                    <div id="circle2" class="circle">
+                        <div id="circle3" class="circle">
+                            <div id="circle4" class="circle">
+                                <div id="circle5" class="circle">
+                                    <div id="circle6" class="circle">
+                                        <div id="circle7" class="circle">
+                                            <div id="circle8" class="circle">
+                                                <div id="circle9" class="circle">
+                                                    <div id="circle10" class="circle">
+                                                        <div id="circle11" class="circle">
+
+                                                        </div>
+                                                    
+                                        
+                                                      </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                        </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+      </div>
+     </div>
+   </div>
+
+   <script>
+    function scaleArtwork() {
+        const wrapper = document.querySelector('.artwork-wrapper');
+        const artW = 256;
+        const artH = 500;
+        const padding = 32;
+
+        const scaleW = (window.innerWidth - padding) / artW;
+        const scaleH = (window.innerHeight - padding) / artH;
+        const scale = Math.min(scaleW, scaleH, 1);
+
+        wrapper.style.transform = `scale(${scale})`;
+    }
+
+    window.addEventListener('resize', scaleArtwork);
+    scaleArtwork();
+   </script>
+</body>
+</html>

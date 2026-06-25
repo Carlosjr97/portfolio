@@ -535,6 +535,28 @@ footer {
   margin: 0;
 }
 
+/* ── CSS ART IFRAME PREVIEW ── */
+a.project-card {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+.css-art-preview {
+  position: relative;
+  overflow: hidden;
+}
+
+.css-art-preview iframe {
+  width: 400%;
+  height: 400%;
+  transform: scale(0.25);
+  transform-origin: top left;
+  pointer-events: none;
+  border: none;
+  display: block;
+}
+
 /* ── CERTIFICATES ── */
 .certs-grid {
   display: grid;

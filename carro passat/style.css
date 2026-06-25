@@ -1,0 +1,171 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --b: clamp(200px, 75vmin, 420px);
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carro {
+    width: var(--b);
+    height: var(--b);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.parabrisa {
+    position: relative;
+    border: calc(0.019 * var(--b)) solid #1e90ff;
+    border-bottom: none;
+    width: calc(0.619 * var(--b));
+    height: calc(0.190 * var(--b));
+    border-radius: calc(0.052 * var(--b)) calc(0.052 * var(--b)) 0 0;
+    background: #5555;
+    transform: perspective(calc(0.012 * var(--b))) rotateX(.50deg);
+    z-index: 2;
+    overflow: hidden;
+}
+
+.parabrisa::before {
+    content: "";
+    position: absolute;
+    width: calc(0.952 * var(--b));
+    height: calc(0.238 * var(--b));
+    background: #ffffff45;
+    transform: rotate(30deg);
+    top: -60%;
+}
+
+.banco {
+    position: absolute;
+    width: calc(0.524 * var(--b));
+    height: calc(0.071 * var(--b));
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+}
+
+.banco::before, .banco::after {
+    content: "";
+    position: relative;
+    width: calc(0.143 * var(--b));
+    height: calc(0.119 * var(--b));
+    background: black;
+    z-index: 2;
+    top: 0;
+    border-radius: calc(0.048 * var(--b));
+}
+
+.retrovisor {
+    position: absolute;
+    width: calc(0.048 * var(--b));
+    height: calc(0.048 * var(--b));
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--color1), var(--color2), var(--color1));
+    --color1: #d3d3d3;
+    --color2: gray;
+    margin-top: calc(0.143 * var(--b));
+    margin-left: calc(0.702 * var(--b));
+}
+
+.capo {
+    width: calc(0.714 * var(--b));
+    height: calc(0.060 * var(--b));
+    background: #1e90ff;
+    position: relative;
+    top: calc(0.002 * var(--b));
+    border-radius: calc(0.036 * var(--b)) calc(0.036 * var(--b)) 0 0;
+    transform: perspective(calc(0.012 * var(--b))) rotateX(.50deg);
+    display: flex;
+}
+
+.para-choque {
+    width: calc(0.786 * var(--b));
+    height: calc(0.119 * var(--b));
+    background: black;
+    border: calc(0.012 * var(--b)) solid gray;
+    border-radius: calc(0.057 * var(--b));
+    position: relative;
+    top: calc(-0.007 * var(--b));
+}
+
+.emblema {
+    position: absolute;
+    width: calc(0.071 * var(--b));
+    margin-top: calc(0.262 * var(--b));
+}
+
+.farol {
+    position: absolute;
+    width: calc(0.083 * var(--b));
+    height: calc(0.083 * var(--b));
+    border-radius: 50%;
+    background: yellow;
+    margin-top: calc(0.262 * var(--b));
+    margin-right: calc(0.643 * var(--b));
+}
+
+.farol1 {
+    position: absolute;
+    width: calc(0.083 * var(--b));
+    height: calc(0.083 * var(--b));
+    border-radius: 50%;
+    background: yellow;
+    margin-top: calc(0.262 * var(--b));
+    margin-left: calc(0.643 * var(--b));
+}
+
+.para-choque1 {
+    width: calc(0.714 * var(--b));
+    height: calc(0.071 * var(--b));
+    background: #1e90ff;
+    margin-top: calc(-0.012 * var(--b));
+    transform: perspective(calc(0.012 * var(--b))) rotateX(-.50deg);
+}
+
+.para-choque2 {
+    position: absolute;
+    width: calc(0.738 * var(--b));
+    height: calc(0.024 * var(--b));
+    border-radius: calc(0.024 * var(--b));
+    margin-top: calc(0.381 * var(--b));
+    background: linear-gradient(to right, var(--color1), var(--color2), var(--color1));
+    --color1: #d3d3d3;
+    --color2: gray;
+}
+
+.rodas {
+    position: relative;
+    width: calc(0.667 * var(--b));
+    height: calc(0.143 * var(--b));
+}
+
+.rodas::before, .rodas::after {
+    content: "";
+    position: absolute;
+    width: calc(0.107 * var(--b));
+    height: calc(0.083 * var(--b));
+    background: #333333;
+    border-radius: 0 0 calc(0.036 * var(--b)) calc(0.036 * var(--b));
+    z-index: -1;
+    top: calc(-0.002 * var(--b));
+}
+
+.rodas::after {
+    right: 0;
+}

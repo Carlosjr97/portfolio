@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS1</title>
+    
+    <style type="text/css">
+        body{
+    background: url('./img/nostalgias.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 40px;
+    overflow-x: hidden;
+    }
+
+#app {
+    position: relative;
+    width: 280px;
+    height: 380px;
+    transform-origin: center center;
+}
+
+@media (max-width: 650px) {
+    #app { transform: scale(0.75); }
+}
+
+@media (max-width: 480px) {
+    #app { transform: scale(0.6); }
+}
+
+@media (max-width: 360px) {
+    #app { transform: scale(0.45); }
+}
+    
+    .square {
+    margin: auto;
+    border-radius: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, var(--color1), var(--color2), var(--color1));
+}
+ 
+    .circle {
+        position: absolute;
+        margin: auto;
+        border: 2px solid #9999;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: black;
+    }
+    .ps1{
+        margin-top: 220px;
+    }
+
+#square1 {
+    width: 200px;
+    height: 150px;
+    background-color: #CCCCCC;
+}
+
+#circle1 {
+    width: 145px;
+    height: 143px;
+    flex-direction: column;
+}
+#circle2 {
+    margin-top: 110px;
+    margin-right: 155px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    animation: pulse 1.2s infinite;
+}
+
+#circle2::after {
+    content: "ligar";
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 9px;
+    color: white;
+    background: rgba(0,0,0,0.6);
+    padding: 2px 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+#circle2.ligado {
+    animation: none;
+    cursor: default;
+}
+
+#circle2.ligado::after {
+    display: none;
+}
+
+@keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(255,255,255,0.8); }
+    70%  { box-shadow: 0 0 0 8px rgba(255,255,255,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+}
+
+#circle3 {
+    margin-top: 0px;
+    margin-left: 310px;
+    width: 30px;
+    height: 30px;
+}
+
+.logo {
+    width: 15px;
+    height: 15px;
+    margin-top: 50px;
+}
+.sony {
+    width: 15px;
+    height: 15px;
+    margin-top: -20px;
+}
+.video {
+    display: none;
+    width: 180px;
+    height: 150px;
+    object-fit: cover;
+}
+.tela {
+        position: absolute;
+        margin: auto;
+        border-radius: 2%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: black;
+    }
+    #tv-wrapper {
+    top: 0;
+    left: 15px;
+    margin: 0;
+}
+
+    #tv {
+    position: relative;
+    margin-top: 0;
+    width: 250px;
+    height: 200px;
+    background-color: #4c4d4f;
+}
+ 
+ #tv2 {
+    margin-left: 130px;
+        margin-top: 180px;
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    border-radius: 50%;
+ }
+
+#tv3 {
+    margin-left: -128px;
+        margin-top: -190px;
+    width: 180px;
+    height: 150px;
+    background-color: black;
+}
+
+#tv4 {
+    margin-left: 100px;
+        margin-top: 190px;
+    width: 2px;
+    height: 2px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+#tv5 {
+    margin-left: -10px;
+        margin-top: 0px;
+    width: 2px;
+    height: 2px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+#tv6 {
+    margin-left: -10px;
+        margin-top: 0px;
+    width: 2px;
+    height: 2px;
+    background-color: black;
+    border-radius: 50%;
+}
+    
+    </style>
+</head>
+<body>
+    
+    <div id="app">
+    <div class="ps1">
+     <div id="square1" class="square">
+       <div id="circle1" class="circle">
+       <img class="sony" src="./img/sony.png">
+       <img class="logo" src="./img/logo.png">
+       <div id="circle2" class="circle">
+       <div id="circle3" class="circle">
+       </div>
+       </div>
+       </div>
+       </div>
+     </div>
+
+
+     <div id="tv-wrapper" class="tela">
+        <div id="tv" class="tela">
+            <div id="tv2" class="tela">
+                <div id="tv3" class="tela">
+                  <img class="video" id="video" src="./img/videoplayback.gif">
+                  <div id="tv4" class="tela">
+                    <div id="tv5" class="tela">
+                      <div id="tv6" class="tela">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+
+        </div>
+     </div>
+    </div>
+
+
+<script>
+    const circle2 = document.getElementById('circle2');
+    const tv2 = document.getElementById('tv2');
+    const video = document.getElementById('video');
+
+    circle2.addEventListener('click', function () {
+        tv2.style.backgroundColor = 'green';
+        video.src = './img/videoplayback.gif?' + Date.now();
+        video.style.display = 'block';
+        circle2.classList.add('ligado');
+    });
+</script>
+</body>
+</html>
